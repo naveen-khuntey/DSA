@@ -1,6 +1,6 @@
 #include<iostream>
 using namespace std;
-//head recursion
+//tail recursion
 void fun1(int n){
     if(n>0)
     {
@@ -8,7 +8,7 @@ void fun1(int n){
         fun1(n-1);
     }
 }
-//tail recursion
+//head recursion
 void fun2(int n)
 {
     if(n>0){

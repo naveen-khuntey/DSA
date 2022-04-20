@@ -6,23 +6,6 @@ class Node
     int data;
     struct Node *next;
 } *first = NULL;
-void create(int A[], int n)
-{
-    int i;
-    struct Node *t, *last;
-    first = new Node();
-    first->data = A[0];
-    first->next = NULL;
-    last = first;
-    for (i = 1; i < n; i++)
-    {
-        t = new Node();
-        t->data = A[i];
-        t->next = NULL;
-        last->next = t;
-        last = t;
-    }
-}
 int length(struct Node *P){
     int cnt=0;
     while(P!=NULL){
@@ -31,7 +14,8 @@ int length(struct Node *P){
     }
     return cnt;
 }
-void insert(Node *p,int ind,int val){
+void insert(int ind,int val){
+    Node *p=first;
     Node *t;
     int i;
     if(ind<0||ind>length(p))
@@ -60,10 +44,14 @@ void Display(Node *p)
 }
 int main()
 {
-     Node *temp;
-    int A[] = {3, 5, 7};
-    create(A, 3);
-    insert(first,3,10);
+    Node *temp;
+    int n;
+    cin>>n;
+    for(int i=0;i<n;i++){
+        int x;
+        cin>>x;
+        insert(i,x);
+    }
     Display(first);
     cout<<endl;
     return 0;

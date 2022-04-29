@@ -97,7 +97,7 @@ void display(Node *h){
 int main(){
     int a[]={1,53,4,5,7};
     create(a,5);
-    insert(head,2,10);
+    _delete(2);
     display(head);
     return 0;
 }

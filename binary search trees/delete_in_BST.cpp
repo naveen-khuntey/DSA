@@ -61,7 +61,7 @@ Node *InSucc(Node *p)
 /*-------------------------delete----------------------*/
 Node *_delete(Node *p, int key)
 {
-    struct Node *q;
+    Node *q;
     if (p == NULL)
         return NULL;
     if (p->lchild == NULL && p->rchild == NULL)
